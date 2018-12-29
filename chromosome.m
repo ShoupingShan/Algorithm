@@ -1,0 +1,11 @@
+data = textread('C:\Users\shp\Desktop\研一\算法设计\Algorithm\chromosome\bestman.txt');
+x=[1:5000];
+data=data(1:5000);
+maxinum=max(data);
+index = find(data == max(data));
+plot(x,data);
+xlabel('Generation');
+ylabel('Eval');
+legend('Bestman Strategy');
+hold on;
+text(index(1),maxinum,{num2str(maxinum)});

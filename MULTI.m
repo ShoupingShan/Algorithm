@@ -1,0 +1,20 @@
+cd '/home/shp/Documents/Code/Primer/Algorithm/multiple_solve';
+data = textread('time.txt');
+% data = data(1:9,:);
+x1=[10,50,100,150,200,300,400,500,10000,20000,50000,1000000];
+y1=data(:,1)';
+y2=data(:,2)';
+y3=data(:,3)';
+y4=data(:,4)';
+
+title('Running Time Compare');
+plot(x1,y1,'r--o');
+xlabel('Complexity');
+ylabel('Time/S');
+hold on;
+plot(x1,y2,'k:+');
+hold on;
+plot(x1,y3,'m-.*');
+hold on;
+plot(x1,y4,'b-x');
+legend('Direct','Iteration','Recursive','Derivation');
