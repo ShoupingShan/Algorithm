@@ -3,7 +3,7 @@ This repository is about three algoritms, such as strassen matrix,
 polynomial evaluation and Evolutionary calculation method. And C++
 is used to calculate result tested in Ubuntu 18.04, Python and
 Matlab are used to plot the result.
-## How to Run
+# How to Run
 **1. Strassen matrix**
 
     $ cd ./Matrix
@@ -22,9 +22,10 @@ Matlab are used to plot the result.
     $ make clean
     $ make
     $ ./main
-## Details
-### Strassen matrix description
+# Details
+## Strassen matrix description
 Matrix multiple problem can be devide into several blocks:
+
 ![block](./image/block.png)
 ![devide](./image/devide.png)
 `T(N)=O(N^2.81)`
@@ -65,9 +66,9 @@ Matrix multiple problem can be devide into several blocks:
     Round    11    Mode 2 costs   1216.94   seconds!
     Round    11    Mode 3 costs   530.189   seconds!
 
-### Polynomial evaluation
+## Polynomial evaluation
 ![polynomial](./image/polynomial.png)
-#### Recursive method
+### Recursive method
     begin
       1. P := a0; Q := 1;
       2. for i = 1 to n do
@@ -76,7 +77,7 @@ Matrix multiple problem can be devide into several blocks:
       end
     end
 `T(N)=O(N)`
-#### Induction method
+### Induction method
 ![indection](./image/induction.png)
 
     begin
@@ -139,7 +140,7 @@ Matrix multiple problem can be devide into several blocks:
     Round    12    Mode    3    costs   0.00047   seconds!
     Round    12    Mode    4    costs   0.000801   seconds!
 
-### Evolutionary calculation
+## Evolutionary calculation
 ![evolution](./image/evolution.png)
 ![function](./image/function.png)
 ![withoutbestman](./image/withoutbestman.png)
@@ -147,3 +148,5 @@ Matrix multiple problem can be devide into several blocks:
 **Output**
 
 ![output](./image/chromosome.png)
+# Contact me
+`Email`:shp395210@outlook.com
