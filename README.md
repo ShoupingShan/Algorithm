@@ -5,23 +5,26 @@ is used to calculate result tested in Ubuntu 18.04, Python and
 Matlab are used to plot the result.
 # How to Run
 **1. Strassen matrix**
-
-    $ cd ./Matrix
-    $ make clean
-    $ make
-    $ ./main
+```shell
+$ cd ./Matrix
+$ make clean
+$ make
+$ ./main
+```
 **2. Polynomial evaluation**
-
-    $ cd ./Polynomial
-    $ make clean
-    $ make
-    $ ./main
+```shell
+$ cd ./Polynomial
+$ make clean
+$ make
+$ ./main
+```
 **3. Evolutionary calculation**
-
-    $ cd ./chromosome
-    $ make clean
-    $ make
-    $ ./main
+```shell
+$ cd ./chromosome
+$ make clean
+$ make
+$ ./main
+```
 # Details
 ## Strassen matrix description
 Matrix multiple problem can be devide into several blocks:
@@ -32,7 +35,7 @@ Matrix multiple problem can be devide into several blocks:
 
 **Result**
 ![Strassen](./image/time_compare.png)
-
+```
     Round    1    Mode 1 costs   2e-06   seconds!
     Round    1    Mode 2 costs   1.1e-05   seconds!
     Round    1    Mode 3 costs   6e-06   seconds!
@@ -65,33 +68,36 @@ Matrix multiple problem can be devide into several blocks:
     Round    11    Mode 1 costs   1326.32   seconds!
     Round    11    Mode 2 costs   1216.94   seconds!
     Round    11    Mode 3 costs   530.189   seconds!
-
+```
 ## Polynomial evaluation
 ![polynomial](./image/polynomial.png)
 ### Recursive method
-    begin
-      1. P := a0; Q := 1;
-      2. for i = 1 to n do
-      3. Q = Qx
-      4. P = P + aiQ
-      end
+```c++
+begin
+    1. P := a0; Q := 1;
+    2. for i = 1 to n do
+    3. Q = Qx
+    4. P = P + aiQ
     end
+end
+```
 `T(N)=O(N)`
 ### Induction method
 ![indection](./image/induction.png)
-
-    begin
-      1. P := an
-      2. for i = 1 to n do
-      3. P = xP + an-i;
-      end
+```c++
+begin
+    1. P := an
+    2. for i = 1 to n do
+    3. P = xP + an-i;
     end
+end
+```
 `T(N)=O(N)`
 
 **Result**
 ![Induction](./image/all.png)
 ![Induction_part](./image/0_1200.png)
-
+```
     Round    1    Mode    2    costs   2e-06   seconds!
     Round    1    Mode    3    costs   1e-06   seconds!
     Round    1    Mode    4    costs   1e-06   seconds!
@@ -139,7 +145,7 @@ Matrix multiple problem can be devide into several blocks:
     Round    12    Mode    2    costs   22.4182   seconds!
     Round    12    Mode    3    costs   0.00047   seconds!
     Round    12    Mode    4    costs   0.000801   seconds!
-
+```
 ## Evolutionary calculation
 ![evolution](./image/evolution.png)
 ![function](./image/function.png)
